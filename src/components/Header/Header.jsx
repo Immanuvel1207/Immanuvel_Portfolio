@@ -21,8 +21,8 @@ const Header = () => {
 
   return (
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
-    <h1 className="logo">Immanuvel</h1>
       <div className="header-container">
+        <h1 className="logo">Immanuvel</h1>
         <div className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
           <ul className="nav-list">
             <li><a href="#home" className="nav-link">Home</a></li>

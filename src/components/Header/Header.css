@@ -94,4 +94,7 @@
     gap: 0rem;
     list-style: none;
   }
+  .logo{
+    display: none;
+  }
 }
