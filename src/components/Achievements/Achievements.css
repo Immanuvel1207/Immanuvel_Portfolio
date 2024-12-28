@@ -1,0 +1,125 @@
+.achievements {
+  background: var(--background-color);
+  padding: 6rem 0;
+}
+
+.achievements-timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.achievements-timeline::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background: var(--primary-color);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.achievement-card {
+  position: relative;
+  width: 50%;
+  padding: 1rem;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideIn 0.5s ease forwards;
+}
+
+.achievement-card.left {
+  left: 0;
+  padding-right: 3rem;
+}
+
+.achievement-card.right {
+  left: 50%;
+  padding-left: 3rem;
+}
+
+.achievement-icon {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  z-index: 1;
+}
+
+.achievement-card.left .achievement-icon {
+  right: -20px;
+}
+
+.achievement-card.right .achievement-icon {
+  left: -20px;
+}
+
+.achievement-content {
+  padding: 1.5rem;
+  background: var(--background-color);
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.achievement-content:hover {
+  transform: translateY(-5px);
+}
+
+.achievement-title {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.achievement-org {
+  color: var(--primary-color);
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.achievement-year {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.achievement-desc {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .achievements-timeline::after {
+    left: 31px;
+  }
+  
+  .achievement-card {
+    width: 100%;
+    padding-left: 5rem;
+    padding-right: 1rem;
+  }
+  
+  .achievement-card.right {
+    left: 0;
+  }
+  
+  .achievement-card .achievement-icon {
+    left: 22px;
+  }
+}

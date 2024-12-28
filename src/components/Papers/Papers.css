@@ -1,0 +1,106 @@
+.papers {
+  background: var(--background-color);
+  padding: 6rem 0;
+}
+
+.papers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.paper-card {
+  background: var(--background-color);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.paper-card:hover {
+  transform: translateY(-5px);
+}
+
+.paper-title {
+  font-size: 1.3rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.paper-meta {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.conference {
+  color: var(--primary-color);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.date-venue {
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.paper-content h4 {
+  margin: 1rem 0 0.5rem;
+  color: var(--text-color);
+}
+
+.abstract {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.findings-list, .awards-list {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.findings-list li, .awards-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--text-color);
+}
+
+.findings-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+}
+
+.awards-list li::before {
+  content: '🏆';
+  position: absolute;
+  left: 0;
+}
+
+.paper-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.paper-btn {
+  flex: 1;
+  padding: 0.8rem;
+  text-align: center;
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.paper-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
