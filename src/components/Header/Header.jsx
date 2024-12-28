@@ -21,9 +21,8 @@ const Header = () => {
 
   return (
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
+    <h1 className="logo">Immanuvel</h1>
       <div className="header-container">
-        <h1 className="logo">Immanuvel</h1>
-        
         <div className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
           <ul className="nav-list">
             <li><a href="#home" className="nav-link">Home</a></li>
@@ -31,6 +30,8 @@ const Header = () => {
             <li><a href="#skills" className="nav-link">Skills</a></li>
             <li><a href="#qualifications" className="nav-link">Qualifications</a></li>
             <li><a href="#projects" className="nav-link">Projects</a></li>
+            <li><a href="#certificates" className="nav-link">Certificates</a></li>
+            <li><a href="#achievements" className="nav-link">Achievements</a></li>
             <li><a href="#contact" className="nav-link">Contact</a></li>
           </ul>
           

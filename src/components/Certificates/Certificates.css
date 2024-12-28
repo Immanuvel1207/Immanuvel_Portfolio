@@ -8,7 +8,7 @@
 
 .certificate-carousel {
   position: relative;
-  width: 800px;
+  width: 1000px;
   margin: 0 auto;
   overflow: hidden;
   display: flex;
@@ -23,7 +23,7 @@
   transition: transform 0.5s ease;
   width: 90%;
   position: relative;
-  height: 400px; /* Adjust this value based on your card height */
+  height: 400px; 
 }
 
 .certificate-card {
@@ -31,8 +31,7 @@
   align-items: center;
   justify-content: space-between;
   width: 90%;
-  max-width: 900px;
-  padding: 4.5rem;
+  padding: 2.5rem;
   background: rgb(125, 149, 254);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
@@ -51,9 +50,8 @@
 
 .certificate-image {
   flex: 1;
-  max-width: 150%;
   border-radius: 10px;
-  overflow: hidden;
+  overflow:hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,7 +69,7 @@
 
 
 .certificate-image img {
-  width: 150%;
+  width: 130%;
   height: auto;
   object-fit:cover;
 }
@@ -120,9 +118,40 @@
   font-size: 0.8rem;
 }
 
-@media (max-width: 768px){
-  .certificate-carousel{
-    width: 300px;
+@media (max-width: 768px) {
+  .certificate-carousel {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .certificate-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .certificate-card:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .certificate-image {
+    width: 100%;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .certificate-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .certificate-info {
+    padding: 0;
+    text-align: center;
   }
 }
 

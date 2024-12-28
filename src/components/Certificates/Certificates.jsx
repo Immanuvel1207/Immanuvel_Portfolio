@@ -21,7 +21,7 @@ const Certificates = () => {
       organization: 'Creative Academy',
       date: 'May 2023',
       credentialId: 'FD-2023-002',
-      image: 'cert2.jpg',
+      image: phot,
       skills: ['HTML', 'CSS', 'JavaScript'],
     },
     // Add more certificates as needed
@@ -37,7 +37,7 @@ const Certificates = () => {
 
   useEffect(() => {
     const interval = setInterval(nextSlide, 5000);
-    return () => clearInterval(interval); // Cleanup on unmount
+    return () => clearInterval(interval); 
   }, []);
 
   return (
