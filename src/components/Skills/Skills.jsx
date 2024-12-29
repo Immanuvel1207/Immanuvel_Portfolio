@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import './Skills.css';
+import img1 from '../../assets/images/icons/html.svg';
 
 const Skills = () => {
   const [activeTab, setActiveTab] = useState('technical');
 
   const skills = {
     technical: [
-      { name: 'HTML/CSS', level: 90 },
+      { name: 'HTML/CSS', level: 90,image: img1 },
       { name: 'JavaScript', level: 85 },
       { name: 'React', level: 80 },
       { name: 'Node.js', level: 75 },
@@ -61,9 +62,8 @@ const Skills = () => {
         <div className="skills-grid">
           {Object.values(skills).flat().map((skill, index) => (
             <div className="skill-card" key={index}>
-              <div className="skill-icon">
-                {/* Replace with actual icons */}
-                <span className="placeholder-icon">🔧</span>
+              <div>
+                <img src={skill.image}/>
               </div>
               <span className="skill-card-name">{skill.name}</span>
             </div>
