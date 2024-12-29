@@ -38,6 +38,7 @@ const Header = () => {
             <li><a href="#skills" className="nav-link" onClick={() => setIsMenuOpen(false)}>Skills</a></li>
             <li><a href="#qualifications" className="nav-link" onClick={() => setIsMenuOpen(false)}>Qualifications</a></li>
             <li><a href="#projects" className="nav-link" onClick={() => setIsMenuOpen(false)}>Projects</a></li>
+            <li><a href="#papers" className="nav-link" onClick={() => setIsMenuOpen(false)}>Papers</a></li>
             <li><a href="#certificates" className="nav-link" onClick={() => setIsMenuOpen(false)}>Certificates</a></li>
             <li><a href="#achievements" className="nav-link" onClick={() => setIsMenuOpen(false)}>Achievements</a></li>
             <li><a href="#contact" className="nav-link" onClick={() => setIsMenuOpen(false)}>Contact</a></li>

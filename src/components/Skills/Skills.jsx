@@ -1,24 +1,46 @@
 import { useState } from 'react';
 import './Skills.css';
-import img1 from '../../assets/images/icons/html.svg';
+import angular from '../../assets/images/icons/angular.svg';
+import bootstrap from '../../assets/images/icons/bootstrap.png';
+import c from '../../assets/images/icons/c-programming-language-seeklogo.svg';
+import cpp from '../../assets/images/icons/c++.svg';
+import css from '../../assets/images/icons/css.svg';
+import flutter from '../../assets/images/icons/Flutter.svg';
+import git from '../../assets/images/icons/Git.svg';
+import github from '../../assets/images/icons/GitHub Colored.svg';
+import html from '../../assets/images/icons/html.svg';
+import java from '../../assets/images/icons/java.svg';
+import javascript from '../../assets/images/icons/javascript.svg';
+import matlab from '../../assets/images/icons/Matlab.svg';
+import mongodb from '../../assets/images/icons/mongodb.svg';
+import mysql from '../../assets/images/icons/mysql.svg';
+import nodejs from '../../assets/images/icons/Node JS.svg';
+import oracle from '../../assets/images/icons/oracle.svg';
+import python from '../../assets/images/icons/python.svg';
+import typescript from '../../assets/images/icons/typescript.svg';
 
 const Skills = () => {
-  const [activeTab, setActiveTab] = useState('technical');
 
   const skills = {
-    technical: [
-      { name: 'HTML/CSS', level: 90,image: img1 },
-      { name: 'JavaScript', level: 85 },
-      { name: 'React', level: 80 },
-      { name: 'Node.js', level: 75 },
-      { name: 'Python', level: 70 },
-    ],
-    tools: [
-      { name: 'Git', level: 85 },
-      { name: 'Docker', level: 70 },
-      { name: 'AWS', level: 65 },
-      { name: 'Figma', level: 75 },
-      { name: 'VS Code', level: 90 },
+    skillset: [
+      { name: 'HTML', level: 90, image: html },
+      { name: 'CSS', level: 85, image: css },
+      { name: 'JavaScript', level: 85, image: javascript },
+      { name: 'TypeScript', level: 80, image: typescript },
+      { name: 'Python', level: 70, image: python },
+      { name: 'Java', level: 75, image: java },
+      { name: 'C', level: 65, image: c },
+      { name: 'C++', level: 65, image: cpp },
+      { name: 'Node.js', level: 75, image: nodejs },
+      { name: 'MongoDB', level: 70, image: mongodb },
+      { name: 'MySQL', level: 75, image: mysql },
+      { name: 'Oracle', level: 70, image: oracle },
+      { name: 'Angular', level: 60, image: angular },
+      { name: 'Flutter', level: 55, image: flutter },
+      { name: 'Matlab', level: 50, image: matlab },
+      { name: 'Git', level: 85, image: git },
+      { name: 'GitHub', level: 80, image: github },
+      { name: 'Bootstrap', level: 75, image: bootstrap },
     ],
   };
 
@@ -26,49 +48,38 @@ const Skills = () => {
     <section id="skills" className="skills section">
       <div className="container">
         <h2 className="section-title">Skills</h2>
+
         
-        <div className="skills-tabs">
-          <button 
-            className={`tab-button ${activeTab === 'technical' ? 'active' : ''}`}
-            onClick={() => setActiveTab('technical')}
-          >
-            Technical Skills
-          </button>
-          <button 
-            className={`tab-button ${activeTab === 'tools' ? 'active' : ''}`}
-            onClick={() => setActiveTab('tools')}
-          >
-            Tools & Platforms
-          </button>
-        </div>
-        
-        <div className="skills-content">
-          {skills[activeTab].map((skill, index) => (
-            <div className="skill-item" key={index}>
-              <div className="skill-info">
-                <span className="skill-name">{skill.name}</span>
-                <span className="skill-percentage">{skill.level}%</span>
-              </div>
-              <div className="skill-bar">
-                <div 
-                  className="skill-progress"
-                  style={{ width: `${skill.level}%` }}
-                />
-              </div>
+          <>
+            {/* <div className="skills-content">
+              {skills.skillset.map((skill, index) => (
+                <div className="skill-item" key={index}>
+                  <div className="skill-info">
+                    <span className="skill-name">{skill.name}</span>
+                    <span className="skill-percentage">{skill.level}%</span>
+                  </div>
+                  <div className="skill-bar">
+                    <div
+                      className="skill-progress"
+                      style={{ width: `${skill.level}%` }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div> */}
+
+            <div className="skills-grid">
+              {skills.skillset.map((skill, index) => (
+                <div className="skill-card" key={index}>
+                  <div>
+                    <img src={skill.image} alt={`${skill.name} logo`} />
+                  </div>
+                  <span className="skill-card-name">{skill.name}</span>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-        
-        <div className="skills-grid">
-          {Object.values(skills).flat().map((skill, index) => (
-            <div className="skill-card" key={index}>
-              <div>
-                <img src={skill.image}/>
-              </div>
-              <span className="skill-card-name">{skill.name}</span>
-            </div>
-          ))}
-        </div>
+          </>
+
       </div>
     </section>
   );
