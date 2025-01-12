@@ -7,32 +7,47 @@ const Qualifications = () => {
   const qualifications = {
     education: [
       {
-        title: 'Computer Science Degree',
-        institution: 'University Name',
-        year: '2018 - 2022',
-        description: 'Bachelor of Science in Computer Science',
+        title: 'Bachelor of Technology in Information Technology',
+        institution: 'Kongu Engineeering College, Perundurai',
+        year: '2022 - 2026',
+        // description: 'CGPA 9.5 with First Class Distinction and Honors in Data Science',
+        description: 'CGPA 9.14',
       },
       {
-        title: 'Web Development Bootcamp',
-        institution: 'Coding Academy',
-        year: '2017',
-        description: 'Intensive full-stack development program',
+        title: 'Higher Secondary Second Year',
+        institution: 'Shri Maruthi Matric Hr Sec School',
+        year: '2022',
+        description: '95.33%',
       },
+      {
+        title: '10th standard',
+        institution: 'Shri Maruthi Matric Hr Sec School',
+        year: '2020',
+        description: '99.6%',
+      },
+      
     ],
     experience: [
-      {
-        title: 'Senior Developer',
-        company: 'Tech Company',
-        year: '2020 - Present',
-        description: 'Leading development team and architecting solutions',
-      },
-      {
-        title: 'Junior Developer',
-        company: 'Startup Inc',
-        year: '2018 - 2020',
-        description: 'Full-stack development and maintenance',
-      },
-    ],
+  {
+    title: 'Java Internship',
+    company: 'InternPe',
+    year: '29 July - 25 Aug 2024',
+    description: '',
+  },
+  {
+    title: 'Android App Development Implant Training',
+    company: 'NXTGEN Instruments',
+    year: '11 Feb - 18 Feb 2024',
+    description: '',
+  },
+  {
+    title: 'Web Development Internship',
+    company: 'Rinex Organization',
+    year: 'Sept - Nov 2023',
+    description: '',
+  },
+],
+
   };
 
   return (

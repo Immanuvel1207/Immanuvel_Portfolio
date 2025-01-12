@@ -176,3 +176,90 @@
     display: none;
   }
 }
+
+/* Fade-in animation for hero text */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-text h1, .hero-text h2, .hero-text p {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.hero-text h1 {
+  animation-delay: 0.3s;
+}
+
+.hero-text h2 {
+  animation-delay: 0.5s;
+}
+
+.hero-text p {
+  animation-delay: 0.7s;
+}
+
+/* Button bounce animation on hover */
+.cta-button:hover {
+  animation: bounce 0.5s ease infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}
+
+/* Social link scale effect on hover */
+.social-links a:hover {
+  transform: scale(1.2);
+  background: #007bff;
+  color: #fff;
+}
+
+/* Blob rotation */
+.blob-animation {
+  animation: blob 8s infinite, rotateBlob 2s linear infinite;
+}
+
+@keyframes rotateBlob {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(1deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-1deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+
+}
+
+.scroll-indicator .arrow {
+  animation: bounceArrow 1.5s infinite;
+}
+
+@keyframes bounceArrow {
+  0%, 100% {
+    transform: translateY(0) rotate(45deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(45deg);
+  }
+}

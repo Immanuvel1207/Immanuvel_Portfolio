@@ -18,30 +18,33 @@ import nodejs from '../../assets/images/icons/Node JS.svg';
 import oracle from '../../assets/images/icons/oracle.svg';
 import python from '../../assets/images/icons/python.svg';
 import typescript from '../../assets/images/icons/typescript.svg';
-
+import vercel from '../../assets/images/icons/vercel.svg';
+import render from '../../assets/images/icons/render.png';
 const Skills = () => {
 
   const skills = {
-    skillset: [
-      { name: 'HTML', level: 90, image: html },
-      { name: 'CSS', level: 85, image: css },
-      { name: 'JavaScript', level: 85, image: javascript },
-      { name: 'TypeScript', level: 80, image: typescript },
-      { name: 'Python', level: 70, image: python },
-      { name: 'Java', level: 75, image: java },
-      { name: 'C', level: 65, image: c },
-      { name: 'C++', level: 65, image: cpp },
-      { name: 'Node.js', level: 75, image: nodejs },
-      { name: 'MongoDB', level: 70, image: mongodb },
-      { name: 'MySQL', level: 75, image: mysql },
-      { name: 'Oracle', level: 70, image: oracle },
-      { name: 'Angular', level: 60, image: angular },
-      { name: 'Flutter', level: 55, image: flutter },
-      { name: 'Matlab', level: 50, image: matlab },
-      { name: 'Git', level: 85, image: git },
-      { name: 'GitHub', level: 80, image: github },
-      { name: 'Bootstrap', level: 75, image: bootstrap },
-    ],
+      skillset: [
+        { name: 'HTML', level: 90, image: html },
+        { name: 'CSS', level: 85, image: css },
+        { name: 'JavaScript', level: 85, image: javascript },
+        { name: 'Python', level: 70, image: python },
+        { name: 'Java', level: 75, image: java },
+        { name: 'C', level: 65, image: c },
+        { name: 'C++', level: 65, image: cpp },
+        { name: 'Node.js', level: 75, image: nodejs },
+        { name: 'MongoDB', level: 70, image: mongodb },
+        { name: 'MySQL', level: 75, image: mysql },
+        { name: 'Oracle', level: 70, image: oracle },
+        { name: 'Render', level: 90, image: render },
+        { name: 'Vercel', level: 70, image: vercel },
+        { name: 'Angular', level: 60, image: angular },
+        { name: 'TypeScript', level: 80, image: typescript },
+        { name: 'Flutter', level: 55, image: flutter },
+        { name: 'Matlab', level: 50, image: matlab },
+        { name: 'Git', level: 85, image: git },
+        { name: 'GitHub', level: 80, image: github },
+        { name: 'Bootstrap', level: 75, image: bootstrap },
+      ],
   };
 
   return (
@@ -51,23 +54,6 @@ const Skills = () => {
 
         
           <>
-            {/* <div className="skills-content">
-              {skills.skillset.map((skill, index) => (
-                <div className="skill-item" key={index}>
-                  <div className="skill-info">
-                    <span className="skill-name">{skill.name}</span>
-                    <span className="skill-percentage">{skill.level}%</span>
-                  </div>
-                  <div className="skill-bar">
-                    <div
-                      className="skill-progress"
-                      style={{ width: `${skill.level}%` }}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div> */}
-
             <div className="skills-grid">
               {skills.skillset.map((skill, index) => (
                 <div className="skill-card" key={index}>

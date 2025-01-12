@@ -1,6 +1,6 @@
 .skills {
   background: var(--background-color);
-  padding: 6rem 0;
+  padding: 5rem 0;
 }
 
 .skills-tabs {
@@ -86,7 +86,7 @@
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 2rem;
   margin-top: 4rem;
 }
@@ -95,15 +95,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
-  padding: 1.5rem;
+  gap: 0.5rem;
+  padding: 1rem;
   background: var(--background-color);
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 .skill-card img{
-  width: 50px;
+  width: 45px;
 }
 
 .skill-card:hover {
@@ -123,7 +123,7 @@
 }
 
 .skill-card-name {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--text-color);
   text-align: center;
 }

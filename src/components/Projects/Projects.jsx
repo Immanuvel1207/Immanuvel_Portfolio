@@ -1,42 +1,147 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ReactPaginate from 'react-paginate';
 import './Projects.css';
+import chatbotImage from '../../assets/images/projects/chatbotImage.png';
+import employeeManagementImage from '../../assets/images/projects/employee-management.png';
+import movieBookingImage from '../../assets/images/projects/movie-booking.png';
+import sapCalculatorImage from '../../assets/images/projects/sap-calculator.png';
+import expenseTrackerImage from '../../assets/images/projects/expense-tracker.png';
+import recommendationSystemImage from '../../assets/images/projects/recommendation-system.png';
+import grocery from '../../assets/images/projects/grocery.png';
+import signin from '../../assets/images/projects/signin.png';
+import task from '../../assets/images/projects/task.png';
+import nanjappanstores from '../../assets/images/projects/nanjappanstores.png';
+
+
 
 const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with real-time inventory management.',
-      image: 'https://via.placeholder.com/300',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Socket.io'],
-      demoLink: 'https://demo.example.com',
-      githubLink: 'https://github.com/example/project',
+      title: 'Multilingual Chatbot for Museum Ticket Booking',
+      description: 'A chatbot to simplify museum ticket booking with multilingual support.',
+      image: chatbotImage,
+      technologies: ['Node.js', 'Telegram API', 'MongoDB'],
+      demoLink: '#',
+      githubLink: '#',
     },
     {
       id: 2,
-      title: 'Portfolio Website',
-      description: 'A responsive and dynamic portfolio website to showcase projects and skills.',
-      image: 'project2.jpg',
-      technologies: ['HTML', 'CSS', 'JavaScript', 'React'],
-      demoLink: 'https://portfolio.example.com',
-      githubLink: 'https://github.com/example/portfolio',
+      title: 'Employee Management System',
+      description: 'A system to manage employee details efficiently.',
+      image: employeeManagementImage,
+      technologies: ['React', 'Spring Boot', 'MongoDB'],
+      demoLink: '#',
+      githubLink: '#',
     },
     {
       id: 3,
-      title: 'Blog Platform',
-      description: 'A feature-rich blogging platform with markdown support.',
-      image: 'project3.jpg',
-      technologies: ['Vue.js', 'Firebase', 'Tailwind CSS'],
-      demoLink: 'https://blog.example.com',
-      githubLink: 'https://github.com/example/blog',
+      title: 'Movie Ticket Booking System Using Angular',
+      description: 'A ticket booking platform with Angular for the front-end.',
+      image: movieBookingImage,
+      technologies: ['Angular', 'Express.js', 'MySQL'],
+      demoLink: '#',
+      githubLink: '#',
     },
+    {
+      id: 4,
+      title: 'SAP Point Calculator',
+      description: 'A tool to calculate SAP points efficiently.',
+      image: sapCalculatorImage,
+      technologies: ['Java', 'Spring Boot'],
+      demoLink: '#',
+      githubLink: '#',
+    },
+    {
+      id: 5,
+      title: 'Expense Tracker Using Python',
+      description: 'A Python application to track daily expenses.',
+      image: expenseTrackerImage,
+      technologies: ['Python', 'Tkinter'],
+      demoLink: '#',
+      githubLink: '#',
+    },
+    {
+      id: 6,
+      title: 'Intelligent Movie Recommendation System Using Machine Learning',
+      description: 'A recommendation system using machine learning to suggest movies.',
+      image: recommendationSystemImage,
+      technologies: ['Python', 'Scikit-Learn', 'Pandas'],
+      demoLink: '#',
+      githubLink: '#',
+    },
+    {
+      id: 7,
+      title: 'Grocery orders management system',
+      description: 'A fully functional website where customers can order and checkout their orders.',
+      image: grocery,
+      technologies: ['React', 'MongoDB', 'Express'],
+      demoLink: '#',
+      githubLink: '#',
+    },
+    {
+      id: 8,
+      title: "SIGN'24",
+      description: 'A website for KEC IT departments intra department competition.',
+      image: signin,
+      technologies: ['HTML', 'CSS'],
+      demoLink: '#',
+      githubLink: '#',
+    },
+    {
+      id: 9,
+      title: 'Task monitoring system',
+      description: 'Task management website with individual dashboard for visualization of status of tasks.',
+      image: task,
+      technologies: ['React', 'MongoDB', 'Express'],
+      demoLink: '#',
+      githubLink: '#',
+    },
+    {
+      id: 10,
+      title: 'Diwali Chit Management',
+      description: 'A flutter app for managing the diwali chit funds of 650+ customers.',
+      image: nanjappanstores,
+      technologies: ['Flutter', 'MongoDB', 'Express'],
+      demoLink: '#',
+      githubLink: '#',
+    },
+    {
+      id: 10,
+      title: 'Diwali Chit Management',
+      description: 'A flutter app for managing the diwali chit funds of 650+ customers.',
+      image: nanjappanstores,
+      technologies: ['Flutter', 'MongoDB', 'Express'],
+      demoLink: '#',
+      githubLink: '#',
+    },
+    // {
+    //   id: 10,
+    //   title: 'Diwali Chit Management',
+    //   description: 'A flutter app for managing the diwali chit funds of 650+ customers.',
+    //   image: nanjappanstores,
+    //   technologies: ['Flutter', 'MongoDB', 'Express'],
+    //   demoLink: '#',
+    //   githubLink: '#',
+    // },
   ];
+
+  const [currentPage, setCurrentPage] = useState(0);
+  const itemsPerPage = 3;
+
+  const offset = currentPage * itemsPerPage;
+  const currentProjects = projects.slice(offset, offset + itemsPerPage);
+  const pageCount = Math.ceil(projects.length / itemsPerPage);
+
+  const handlePageChange = ({ selected }) => {
+    setCurrentPage(selected);
+  };
 
   return (
     <section id="projects" className="projects">
       <h2 className="section-title">Projects</h2>
       <div className="project-showcase">
-        {projects.map((project) => (
+        {currentProjects.map((project) => (
           <div key={project.id} className="project-card">
             <div className="card-inner">
               {/* Front Side */}
@@ -80,6 +185,17 @@ const Projects = () => {
           </div>
         ))}
       </div>
+      <ReactPaginate
+        previousLabel={'Previous'}
+        nextLabel={'Next'}
+        breakLabel={'...'}
+        pageCount={pageCount}
+        marginPagesDisplayed={2}
+        pageRangeDisplayed={3}
+        onPageChange={handlePageChange}
+        containerClassName={'pagination'}
+        activeClassName={'active'}
+      />
     </section>
   );
 };

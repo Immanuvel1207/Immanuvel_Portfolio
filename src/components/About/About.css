@@ -54,10 +54,10 @@
 }
 
 .about-description {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   line-height: 1.6;
   color: var(--text-color);
-  justify-content:space-between;
+  text-align: justify;
 }
 
 .stats-grid {
@@ -91,6 +91,11 @@
 .stat-label {
   font-size: 0.9rem;
   color: var(--text-color);
+}
+
+.stat-label a{
+  text-decoration: none;
+  color: black;
 }
 
 .cv-button {
