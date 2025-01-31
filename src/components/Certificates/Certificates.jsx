@@ -2,14 +2,14 @@ import { useState, useEffect } from 'react';
 import './Certificates.css';
 
 // Import all images
-import ArtificialIntelligence from './images/ArtificialIntelligencefoundationcertificate-1.jpg';
+import ArtificialIntelligence from './images/aif.jpg';
 import BITPAPER from './images/BITPAPER-1.jpg';
 import codechefpy from './images/codechefpy.jpg';
 import deepLearning from './images/deeplearning.jpg';
 import NVIDIA from './images/Immanuvel_Certificate _ NVIDIA-1.jpg';
 import Ideathon from './images/immanuvelideathon-1.jpg';
 import Rinex from './images/immanuvelRinex-1.jpg';
-import AIfoundation from './images/IntroductiontoArtificialIntelligence-1.jpg';
+import AIfoundation from './images/iai.jpg';
 import NLP from './images/Naturallanguageprocessing-1.jpg';
 import signin_coding from './images/signin_coding.jpg';
 import signin_quiz from './images/signin_quiz.jpg';
