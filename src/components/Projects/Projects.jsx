@@ -22,44 +22,52 @@ const Projects = () => {
       description: 'A chatbot to simplify museum ticket booking with multilingual support.',
       image: chatbotImage,
       technologies: ['Node.js', 'Telegram API', 'MongoDB'],
-      demoLink: '#',
-      githubLink: '#',
+      demoLink: 'https://t.me/smart_muse_bot',
+      iddemo : true,
     },
     {
       id: 2,
       title: 'Employee Management System',
       description: 'A system to manage employee details efficiently.',
       image: employeeManagementImage,
-      technologies: ['React', 'Spring Boot', 'MongoDB'],
-      demoLink: '#',
-      githubLink: '#',
+      technologies: ['React', 'Express.js', 'MongoDB'],
+      demoLink: 'https://employee-management-system-x7bb.onrender.com/',
+      info: 'Use admin admin for exploring',
+      iddemo : true,
+
     },
     {
       id: 3,
       title: 'Movie Ticket Booking System Using Angular',
       description: 'A ticket booking platform with Angular for the front-end.',
       image: movieBookingImage,
-      technologies: ['Angular', 'Express.js', 'MySQL'],
+      technologies: ['Angular', 'Express.js', 'MongoDB'],
       demoLink: '#',
-      githubLink: '#',
+      iddemo : false,
+
+       
     },
     {
       id: 4,
       title: 'SAP Point Calculator',
       description: 'A tool to calculate SAP points efficiently.',
       image: sapCalculatorImage,
-      technologies: ['Java', 'Spring Boot'],
+      technologies: ['HTML', 'CSS','Node.js'],
       demoLink: '#',
-      githubLink: '#',
+      iddemo : false,
+
+       
     },
     {
       id: 5,
       title: 'Expense Tracker Using Python',
       description: 'A Python application to track daily expenses.',
       image: expenseTrackerImage,
-      technologies: ['Python', 'Tkinter'],
+      technologies: ['Python'],
       demoLink: '#',
-      githubLink: '#',
+      iddemo : false,
+
+       
     },
     {
       id: 6,
@@ -68,7 +76,9 @@ const Projects = () => {
       image: recommendationSystemImage,
       technologies: ['Python', 'Scikit-Learn', 'Pandas'],
       demoLink: '#',
-      githubLink: '#',
+      iddemo : false,
+
+       
     },
     {
       id: 7,
@@ -76,17 +86,21 @@ const Projects = () => {
       description: 'A fully functional website where customers can order and checkout their orders.',
       image: grocery,
       technologies: ['React', 'MongoDB', 'Express'],
-      demoLink: '#',
-      githubLink: '#',
+      demoLink: 'https://billcalculator-1.onrender.com/',
+      iddemo : true,
+
+       
     },
     {
       id: 8,
       title: "SIGN'24",
       description: 'A website for KEC IT departments intra department competition.',
       image: signin,
-      technologies: ['HTML', 'CSS'],
-      demoLink: '#',
-      githubLink: '#',
+      technologies: ['HTML', 'CSS','JS'],
+      demoLink: 'https://karthikeyan-2004.github.io/SignIn2k24/',
+      iddemo : true,
+
+       
     },
     {
       id: 9,
@@ -94,8 +108,10 @@ const Projects = () => {
       description: 'Task management website with individual dashboard for visualization of status of tasks.',
       image: task,
       technologies: ['React', 'MongoDB', 'Express'],
-      demoLink: '#',
-      githubLink: '#',
+      demoLink: 'https://android-task-monitoring-system.onrender.com/',
+      iddemo : true,
+
+       
     },
     {
       id: 10,
@@ -104,16 +120,9 @@ const Projects = () => {
       image: nanjappanstores,
       technologies: ['Flutter', 'MongoDB', 'Express'],
       demoLink: '#',
-      githubLink: '#',
-    },
-    {
-      id: 10,
-      title: 'Diwali Chit Management',
-      description: 'A flutter app for managing the diwali chit funds of 650+ customers.',
-      image: nanjappanstores,
-      technologies: ['Flutter', 'MongoDB', 'Express'],
-      demoLink: '#',
-      githubLink: '#',
+      iddemo : false,
+
+       
     },
     // {
     //   id: 10,
@@ -122,7 +131,7 @@ const Projects = () => {
     //   image: nanjappanstores,
     //   technologies: ['Flutter', 'MongoDB', 'Express'],
     //   demoLink: '#',
-    //   githubLink: '#',
+    //    
     // },
   ];
 
@@ -165,20 +174,14 @@ const Projects = () => {
                   ))}
                 </div>
                 <div className="project-links">
-                  <a
+                {project.iddemo && <a
                     href={project.demoLink}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     View Demo
-                  </a>
-                  <a
-                    href={project.githubLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    GitHub
-                  </a>
+                  </a>}
+                  <p style={{marginTop:'10px'}}>{project.info}</p>
                 </div>
               </div>
             </div>

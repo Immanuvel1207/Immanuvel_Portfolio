@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 const Contact = () => {
@@ -9,10 +10,32 @@ const Contact = () => {
     message: ''
   });
 
+  const [isSent, setIsSent] = useState(false);
+  const [error, setError] = useState('');
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+
+    emailjs.send(
+      'service_9pmq9de',   // Replace with your EmailJS service ID
+      'template_0w3uo4m',  // Replace with your EmailJS template ID
+      {
+        name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      },
+      'mJNtxfgpx5E8LaIS5'    // Replace with your EmailJS public key
+    )
+    .then(() => {
+      setIsSent(true);
+      setError('');
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    })
+    .catch((err) => {
+      setError('Failed to send message. Please try again.');
+      console.error('EmailJS Error:', err);
+    });
   };
 
   const handleChange = (e) => {
@@ -32,8 +55,8 @@ const Contact = () => {
             <div className="info-item">
               <div className="info-icon">📍</div>
               <div className="info-content">
-                <h3>Location</h3>
-                <p>City, Country</p>
+                <h3>Perundurai</h3>
+                <p>Erode, India</p>
               </div>
             </div>
             
@@ -41,7 +64,7 @@ const Contact = () => {
               <div className="info-icon">📧</div>
               <div className="info-content">
                 <h3>Email</h3>
-                <p>example@email.com</p>
+                <p>r.immanuvel12@gmail.com</p>
               </div>
             </div>
             
@@ -49,14 +72,14 @@ const Contact = () => {
               <div className="info-icon">📱</div>
               <div className="info-content">
                 <h3>Phone</h3>
-                <p>+1 234 567 890</p>
+                <p>+91 8825503860</p>
               </div>
             </div>
             
             <div className="social-links">
-              <a href="#" className="social-link">LinkedIn</a>
-              <a href="#" className="social-link">GitHub</a>
-              <a href="#" className="social-link">Twitter</a>
+              <a href="https://www.linkedin.com/in/immanuvel-r-336442259/" className="social-link">LinkedIn</a>
+              <a href="https://github.com/Immanuvel1207" className="social-link">GitHub</a>
+              <a href="https://leetcode.com/u/Immanuvel12/" className="social-link">Leetcode</a>
             </div>
           </div>
           
@@ -103,9 +126,12 @@ const Contact = () => {
                 required
               ></textarea>
             </div>
-            
+            {isSent && <p className="success-message">✅ Message sent successfully!</p>}
+            {error && <p className="error-message">❌ {error}</p>}
             <button type="submit" className="submit-btn">Send Message</button>
           </form>
+
+          
         </div>
       </div>
     </section>

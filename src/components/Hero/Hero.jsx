@@ -1,6 +1,7 @@
 import './Hero.css';
 import { FaLinkedin, FaGithub, FaEnvelope, FaInstagram } from 'react-icons/fa';
 import phot from '../Hero/22ITR035.png';
+import { FaCode } from 'react-icons/fa6';
 const Hero = () => {
   return (
     <section id="home" className="hero">
@@ -16,13 +17,16 @@ const Hero = () => {
                 <FaLinkedin size={24}/>
               </a>
               <a href="https://github.com/Immanuvel1207" target="_blank" rel="noopener noreferrer">
-              <FaGithub size={24}/>
+                <FaGithub size={24}/>
               </a>
               <a href="mailto:r.immanuvel12@gmail.com">
-              <FaEnvelope size={24}/>
+                <FaEnvelope size={24}/>
+              </a>
+              <a href="https://leetcode.com/u/Immanuvel12/">
+                <FaCode size={24}/>
               </a>
               <a href="https://www.instagram.com/immanuvel.12/">
-              <FaInstagram size={24}/>
+                <FaInstagram size={24}/>
               </a>
             </div>
             

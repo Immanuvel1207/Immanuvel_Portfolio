@@ -16,10 +16,10 @@ const About = () => {
           
           <div className="about-text">
             <p className="about-description">
-            Full Stack Developer and third-year engineering student with a passion
+             Third-year engineering student and Full Stack Developer with a passion
              for creating innovative and user-friendly web applications. Skilled in React, Node.js,
-              and MongoDB, I’ve worked on impactful. With a strong foundation in network programming and enterprise application development,
-                I combine technical expertise with creativity to deliver seamless user experiences. Dedicated to continuous learning.
+              and MongoDB. With a strong foundation in network programming and enterprise application development,
+                I combine technical expertise with creativity to deliver seamless user experiences. 
             </p>
             
             <div className="stats-grid">

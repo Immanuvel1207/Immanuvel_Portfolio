@@ -4,21 +4,53 @@ const Achievements = () => {
   const achievements = [
     {
       id: 1,
-      title: 'Best Developer Award',
-      organization: 'Tech Company',
-      year: '2023',
-      description: 'Recognized for outstanding contributions to project development and team leadership.',
+      title: 'Sign-In Project Presentation - 1st Prize',
+      organization: 'KEC',
+      year: '2024',
+      description: 'Awarded 1st place for excellence in project presentation.',
       icon: '🏆'
     },
     {
       id: 2,
-      title: 'Innovation Excellence',
-      organization: 'Industry Conference',
-      year: '2022',
-      description: 'Awarded for developing an innovative solution that improved system efficiency by 40%.',
+      title: 'Inception Day (Paper Presentation) - 1nd Prize',
+      organization: 'KEC',
+      year: '2024',
+      description: 'Secured 1st place in the Inception day paper presentation competition.',
+      icon: '📜'
+    },
+    {
+      id: 3,
+      title: 'Academic Excellence Award',
+      organization: 'KEC',
+      year: '2024',
+      description: 'Recognized for outstanding academic performance.',
+      icon: '🎓'
+    },
+    {
+      id: 4,
+      title: 'Ideathon (Project Presentation) - 2nd Prize',
+      organization: 'KEC',
+      year: '2024',
+      description: 'Secured 2nd place in the Ideathon project presentation competition.',
       icon: '💡'
     },
-    // Add more achievements as needed
+    {
+      id: 5,
+      title: 'Sign-In Coding Competition - 2nd Prize',
+      organization: 'KEC',
+      year: '2023',
+      description: 'Achieved 2nd place in a competitive coding event.',
+      icon: '💻'
+    },
+    {
+      id: 6,
+      title: 'Ideathon (Project Presentation) - 2nd Prize',
+      organization: 'KEC',
+      year: '2023',
+      description: 'Secured 2nd place in the Ideathon project presentation competition.',
+      icon: '🚀'
+    },
+
   ];
 
   return (
