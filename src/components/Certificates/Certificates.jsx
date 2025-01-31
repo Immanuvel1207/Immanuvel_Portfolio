@@ -8,7 +8,7 @@ import codechefpy from './images/codechefpy.jpg';
 import deepLearning from './images/deeplearning.jpg';
 import NVIDIA from './images/Immanuvel_Certificate _ NVIDIA-1.jpg';
 import Ideathon from './images/immanuvelideathon-1.jpg';
-import Rinex from './images/immanuvelRinex-1.jpg';
+import Rinex from './images/ir.jpg';
 import AIfoundation from './images/iai.jpg';
 import NLP from './images/Naturallanguageprocessing-1.jpg';
 import signin_coding from './images/signin_coding.jpg';
