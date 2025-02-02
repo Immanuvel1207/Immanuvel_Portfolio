@@ -35,15 +35,21 @@ const Qualifications = () => {
     description: '',
   },
   {
-    title: 'Android App Development Implant Training',
+    title: 'Android App Development Inplant Training',
     company: 'NXTGEN Instruments',
-    year: '11 Feb - 18 Feb 2024',
+    year: 'Feb 2024',
     description: '',
   },
   {
     title: 'Web Development Internship',
     company: 'Rinex Organization',
     year: 'Sept - Nov 2023',
+    description: '',
+  },
+  {
+    title: ' Frontend Inplant Training',
+    company: ' Luisant Software Solutions',
+    year: 'Sept 2023',
     description: '',
   },
 ],

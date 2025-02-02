@@ -22,10 +22,10 @@ const Hero = () => {
               <a href="mailto:r.immanuvel12@gmail.com">
                 <FaEnvelope size={24}/>
               </a>
-              <a href="https://leetcode.com/u/Immanuvel12/">
+              <a href="https://leetcode.com/u/Immanuvel12/" target="_blank">
                 <FaCode size={24}/>
               </a>
-              <a href="https://www.instagram.com/immanuvel.12/">
+              <a href="https://www.instagram.com/immanuvel.12/" target="_blank">
                 <FaInstagram size={24}/>
               </a>
             </div>

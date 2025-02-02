@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactPaginate from 'react-paginate';
 import './Projects.css';
 import chatbotImage from '../../assets/images/projects/chatbotImage.png';
@@ -136,7 +136,20 @@ const Projects = () => {
   ];
 
   const [currentPage, setCurrentPage] = useState(0);
-  const itemsPerPage = 3;
+  const getItemsPerPage = () => {
+    if (window.innerWidth <= 480) return 1; // 1 project per page on small screens
+    if (window.innerWidth <= 768) return 2; // 2 projects per page on tablets
+    return 3; // Default for larger screens
+  };
+  
+  const [itemsPerPage, setItemsPerPage] = useState(getItemsPerPage());
+  
+  useEffect(() => {
+    const handleResize = () => setItemsPerPage(getItemsPerPage());
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  
 
   const offset = currentPage * itemsPerPage;
   const currentProjects = projects.slice(offset, offset + itemsPerPage);
@@ -149,18 +162,23 @@ const Projects = () => {
   return (
     <section id="projects" className="projects">
       <h2 className="section-title">Projects</h2>
-      <div className="project-showcase">
+      <div className="project-showcase" style={{gridTemplateColumns: `repeat(${itemsPerPage}, 1fr)`, 
+                                                justifyContent: 'center'}}>
         {currentProjects.map((project) => (
           <div key={project.id} className="project-card">
             <div className="card-inner">
               {/* Front Side */}
               <div className="card-front">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="project-image"
-                />
-                <h3>{project.title}</h3>
+              <img
+                src={project.image}
+                alt={project.title}
+                className="project-image"
+                style={{ 
+                  width: itemsPerPage === 1 ? '80%' : itemsPerPage === 2 ? '90%' : '100%', 
+                  height: itemsPerPage === 1 ? '60%' : itemsPerPage === 2 ? '220px' : '200px'
+                }}
+              />
+              <h3>{project.title}</h3>
               </div>
               {/* Back Side */}
               <div className="card-back">

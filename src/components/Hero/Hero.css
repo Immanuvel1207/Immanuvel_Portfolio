@@ -86,7 +86,7 @@
   position: relative;
   width: 300px;
   height: 300px;
-  animation: blob 8s infinite;
+  /* animation: blob 8s infinite; */
 }
 
 .profile-photo {
@@ -96,13 +96,13 @@
   border-radius: 40% 70% 70% 40%/40% 40% 90% 70%;
 }
 
-@keyframes blob {
+/* @keyframes blob {
   0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
   25% { border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%; }
   50% { border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%; }
   75% { border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%; }
   100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
-}
+} */
 
 .scroll-indicator {
   position: absolute;
@@ -223,16 +223,40 @@
 /* Social link scale effect on hover */
 .social-links a:hover {
   transform: scale(1.2);
-  background: #007bff;
   color: #fff;
 }
 
-/* Blob rotation */
-.blob-animation {
-  animation: blob 8s infinite, rotateBlob 2s linear infinite;
+/* LinkedIn */
+.social-links a[href*="linkedin.com"]:hover {
+  background: #0077b5;
 }
 
-@keyframes rotateBlob {
+/* GitHub */
+.social-links a[href*="github.com"]:hover {
+  background: #171515;
+}
+
+/* Email */
+.social-links a[href*="mailto:"]:hover {
+  background: #D44638;
+}
+
+/* LeetCode */
+.social-links a[href*="leetcode.com"]:hover {
+  background: #FFA116;
+}
+
+/* Instagram */
+.social-links a[href*="instagram.com"]:hover {
+  background: #ea008c;
+}
+
+/* Blob rotation */
+/* .blob-animation {
+  animation: blob 8s infinite, rotateBlob 2s linear infinite;
+} */
+
+/* @keyframes rotateBlob {
   0% {
     transform: rotate(0deg);
   }
@@ -249,7 +273,7 @@
     transform: rotate(0deg);
   }
 
-}
+} */
 
 .scroll-indicator .arrow {
   animation: bounceArrow 1.5s infinite;

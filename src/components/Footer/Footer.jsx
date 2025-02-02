@@ -26,9 +26,10 @@ const Footer = () => {
         <div className="footer-section">
           <h4>Connect</h4>
           <div className="footer-social">
-            <a href="#" className="social-icon">LinkedIn</a>
-            <a href="#" className="social-icon">GitHub</a>
-            <a href="#" className="social-icon">Twitter</a>
+            <a href="https://www.linkedin.com/in/immanuvel-r-336442259/" className="social-icon">LinkedIn</a>
+            <a href="https://leetcode.com/u/Immanuvel12/" className="social-icon">Leetcode</a>
+            <a href="https://github.com/Immanuvel1207" className="social-icon">GitHub</a>
+            <a href="https://www.instagram.com/immanuvel.12/" className="social-icon">Instagram</a>
           </div>
         </div>
       </div>

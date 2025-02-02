@@ -43,9 +43,9 @@ const Header = () => {
             <li><a href="#achievements" className="nav-link" onClick={() => setIsMenuOpen(false)}>Achievements</a></li>
             <li><a href="#contact" className="nav-link" onClick={() => setIsMenuOpen(false)}>Contact</a></li>
           </ul>
-          <button className="theme-toggle" onClick={toggleTheme}>
+          {/* <button className="theme-toggle" onClick={toggleTheme}>
             {isDarkTheme ? '☀️' : '🌙'}
-          </button>
+          </button> */}
         </div>
       </div>
     </header>
