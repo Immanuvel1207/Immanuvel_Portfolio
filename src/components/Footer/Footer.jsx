@@ -35,7 +35,7 @@ const Footer = () => {
       </div>
       
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Immanuvel. All rights reserved.</p>
+        <p><div class="elfsight-app-010d0724-a1d2-48de-a2c8-820c4ff0a86a" data-elfsight-app-lazy></div></p>
         <button className="scroll-top" onClick={scrollToTop}>↑</button>
       </div>
     </footer>
