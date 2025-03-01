@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
 import './Papers.css';
-import inception from './images/inception.png';
+import inception from '../../assets/images/certificates/inception.jpeg';
+import inception1 from '../../assets/images/certificates/1inception.jpeg';
+import anna from '../../assets/images/certificates/anna.jpeg';
+import bannari from '../../assets/images/certificates/bannari.jpeg';
+import cit from '../../assets/images/certificates/cit.jpeg';
+import signin from '../../assets/images/certificates/signin.jpeg';
+import signin1 from '../../assets/images/certificates/1signin.jpeg';
+import csea from '../../assets/images/certificates/csea.jpeg';
+import csea1 from '../../assets/images/certificates/1csea.jpeg';
+
 
 const Papers = () => {
   const [expandedPaper, setExpandedPaper] = useState(null);
@@ -11,21 +20,21 @@ const Papers = () => {
       title: 'Movie Recommendation System',
       institution: `Bannari Amman Institute of Technology And <br>Kongu Engineering College`,
       abstract: 'This paper presents a movie recommendation system that leverages collaborative filtering techniques to suggest movies to users based on their preferences and ratings. By analyzing user data, the system recommends movies that align with the user’s interests, improving user engagement and satisfaction. The proposed model is implemented using machine learning algorithms to ensure accurate and relevant suggestions.',
-      certificateImage: 'certificate1.jpg',
+      certificateImage: bannari,
     },
     {
       id: 2,
       title: 'Health Monitoring System using 8051',
       institution: 'Coimbatore Institute of Technology And <br> Madras Institute of Technology',
       abstract: 'This paper discusses the design and development of a health monitoring system based on the 8051 microcontroller. The system monitors key health parameters such as heart rate, temperature, and blood pressure in real-time. The collected data is displayed on an LCD screen, and alerts are triggered when any parameter falls outside the predefined thresholds, ensuring timely medical intervention.',
-      certificateImage: 'certificate2.jpg',
+      certificateImage: cit,
     },
     {
       id: 3,
       title: 'Quantum Computing',
       institution: 'Anna University Coimbatore',
       abstract: 'Quantum computing is an emerging field that promises to revolutionize information processing by using quantum bits (qubits). This paper explores the principles of quantum mechanics and their application to computational models. It discusses quantum algorithms such as Shor’s and Grover’s algorithms and the potential of quantum computers to solve complex problems more efficiently than classical computers.',
-      certificateImage: 'certificate4.jpg',
+      certificateImage: anna,
     },
     {
       id: 4,
@@ -39,7 +48,8 @@ const Papers = () => {
       title: 'SmartBot for Museum Ticket Booking',
       institution: 'KEC',
       abstract: 'The SmartBot for museum ticket booking is a chatbot application designed in Telegram to simplify the ticket booking process. The bot interacts with users, offering museum options, session times, and seat availability. It provides real-time updates, assists with ticket reservation, and streamlines the entire booking process. The system is integrated with a backend database for managing bookings and user details.',
-      certificateImage: 'certif icate7.jpg',
+      certificateImage: signin,
+      certificateImage2: signin1,
     },
     {
       id: 6,
@@ -47,6 +57,15 @@ const Papers = () => {
       institution: 'KEC',
       abstract: 'Face liveliness detection is an essential component of facial recognition systems to prevent spoofing attacks. This paper presents a system that detects facial liveliness by analyzing various cues such as eye movement, facial expression, and head pose. The proposed approach uses deep learning techniques to distinguish between live faces and photos/videos, enhancing the security of face recognition systems.',
       certificateImage: inception,
+      certificateImage2: inception1,
+    },
+    {
+      id: 7,
+      title: 'Smart Garbage Collector',
+      institution: 'KEC',
+      abstract: 'The Smart Garbage Collector is an IoT-based system that automates waste collection and management in smart cities. The system comprises smart bins equipped with ultrasonic sensors to detect waste levels and notify the garbage collection vehicle when bins are full. It optimizes waste collection routes, reduces operational costs, and promotes efficient waste disposal practices in urban areas.',
+      certificateImage: csea,
+      certificateImage2: csea1,
     },
   ];
 
@@ -80,9 +99,13 @@ const Papers = () => {
                     {paper.certificateImage && (
                       <div className="certificate">
                         <h4>Certificate</h4>
-                        <img style={{height: '300px',width: '400px;'}}  src={paper.certificateImage} alt="Certificate" className="certificate-img" />
+                        <img style={{height: '300px',width: '400px;', marginRight: '10px'}}  src={paper.certificateImage} alt="Certificate" className="certificate-img" />
+                        {paper.certificateImage2 && (
+                        <img style={{height: '300px',width: '400px;'}}  src={paper.certificateImage2} alt="Certificate" className="certificate-img" />
+                    )}
                       </div>
                     )}
+                    
                   </div>
                 </div>
               )}
