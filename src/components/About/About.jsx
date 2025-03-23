@@ -1,6 +1,6 @@
 import './About.css';
 import phot from '../About/fulllength.png';
-import pdf from '../About/Immanuvel_R_Resume.pdf';
+import pdf from '../About/IMMANUVEL_R.pdf';
 const About = () => {
   return (
     <section id="about" className="about section">
