@@ -38,6 +38,17 @@ const Projects = () => {
     },
     {
       id: 3,
+      title: 'Grocery orders management system',
+      description: 'A fully functional website where customers can order and checkout their orders.',
+      image: grocery,
+      technologies: ['React', 'MongoDB', 'Express'],
+      demoLink: 'https://grocery-one-bay.vercel.app/',
+      iddemo : true,
+
+       
+    },
+    {
+      id: 4,
       title: 'Movie Ticket Booking System Using Angular',
       description: 'A ticket booking platform with Angular for the front-end.',
       image: movieBookingImage,
@@ -47,17 +58,8 @@ const Projects = () => {
 
        
     },
-    {
-      id: 4,
-      title: 'SAP Point Calculator',
-      description: 'A tool to calculate SAP points efficiently.',
-      image: sapCalculatorImage,
-      technologies: ['HTML', 'CSS','Node.js'],
-      demoLink: '#',
-      iddemo : false,
-
-       
-    },
+    
+    
     {
       id: 5,
       title: 'Expense Tracker Using Python',
@@ -80,16 +82,15 @@ const Projects = () => {
 
        
     },
+    
     {
       id: 7,
-      title: 'Grocery orders management system',
-      description: 'A fully functional website where customers can order and checkout their orders.',
-      image: grocery,
-      technologies: ['React', 'MongoDB', 'Express'],
-      demoLink: 'https://grocery-one-bay.vercel.app/',
-      iddemo : true,
-
-       
+      title: 'SAP Point Calculator',
+      description: 'A tool to calculate SAP points efficiently.',
+      image: sapCalculatorImage,
+      technologies: ['HTML', 'CSS','Node.js'],
+      demoLink: '#',
+      iddemo : false,
     },
     {
       id: 8,
