@@ -86,7 +86,7 @@ const Projects = () => {
       description: 'A fully functional website where customers can order and checkout their orders.',
       image: grocery,
       technologies: ['React', 'MongoDB', 'Express'],
-      demoLink: 'https://billcalculator-1.onrender.com/',
+      demoLink: 'https://grocery-one-bay.vercel.app/',
       iddemo : true,
 
        
