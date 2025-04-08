@@ -1,6 +1,6 @@
 import './About.css';
 import phot from '../About/fulllength.png';
-import pdf from '../../assets/images/Resume.pdf';
+import pdf from '../About/resume.pdf';
 const About = () => {
   return (
     <section id="about" className="about section">
