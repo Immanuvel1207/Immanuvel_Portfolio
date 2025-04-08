@@ -10,7 +10,7 @@ const Hero = () => {
           <div className="hero-text">
             <h1>Hi, I'm Immanuvel</h1>
             <h2>Full Stack Developer</h2>
-            <p>I create innovative web solutions with cutting-edge technologies</p>
+            <p>I create innovative web solutions to solve real-world problems.</p>
             
             <div className="social-links">
               <a href="https://www.linkedin.com/in/immanuvel-r-336442259/" target="_blank" rel="noopener noreferrer">
