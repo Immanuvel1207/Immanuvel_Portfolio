@@ -139,7 +139,7 @@ const Projects = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const getItemsPerPage = () => {
     if (window.innerWidth <= 480) return 1; // 1 project per page on small screens
-    if (window.innerWidth <= 768) return 2; // 2 projects per page on tablets
+    if (window.innerWidth <= 768) return 1; // 2 projects per page on tablets
     return 3; // Default for larger screens
   };
   

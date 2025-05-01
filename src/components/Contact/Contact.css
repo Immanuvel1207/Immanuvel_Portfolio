@@ -122,4 +122,40 @@
     grid-template-columns: 1fr;
     gap: 2rem;
   }
+
+  /* Add these new styles for better mobile display */
+  .info-item {
+    margin-bottom: 1.5rem;
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .social-link {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Add a smaller screen breakpoint */
+@media (max-width: 480px) {
+  .contact-info,
+  .contact-form {
+    padding: 1.5rem;
+  }
+
+  .social-links {
+    gap: 0.5rem;
+  }
+
+  .social-link {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.8rem;
+  }
 }

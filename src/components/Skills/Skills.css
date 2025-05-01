@@ -133,8 +133,33 @@
     flex-direction: column;
     align-items: center;
   }
-  
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .skill-card img {
+    width: 40px;
+  }
+
+  .skill-card-name {
+    font-size: 0.9rem;
+  }
+}
+
+/* Add a smaller screen breakpoint */
+@media (max-width: 480px) {
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .skill-card {
+    padding: 0.8rem;
+  }
+
+  .skill-card:hover {
+    transform: translateY(-5px);
   }
 }

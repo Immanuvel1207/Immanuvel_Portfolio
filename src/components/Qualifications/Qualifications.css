@@ -116,18 +116,53 @@
   .timeline::after {
     left: 31px;
   }
-  
+
   .timeline-item {
     width: 100%;
     padding-left: 5rem;
     padding-right: 1rem;
   }
-  
+
   .timeline-item.right {
     left: 0;
   }
-  
+
   .timeline-item::before {
     left: 22px;
+  }
+
+  /* Add these new styles for better mobile display */
+  .tabs {
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .tab-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .timeline-content {
+    padding: 1.2rem;
+  }
+}
+
+/* Add a smaller screen breakpoint */
+@media (max-width: 480px) {
+  .timeline-item {
+    padding-left: 4rem;
+  }
+
+  .timeline-content {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 1.1rem;
+  }
+
+  .year {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
   }
 }

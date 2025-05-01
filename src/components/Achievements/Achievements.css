@@ -108,18 +108,38 @@
   .achievements-timeline::after {
     left: 31px;
   }
-  
+
   .achievement-card {
     width: 100%;
     padding-left: 5rem;
     padding-right: 1rem;
   }
-  
+
   .achievement-card.right {
     left: 0;
   }
-  
+
   .achievement-card .achievement-icon {
     left: 22px;
+  }
+
+  /* Add these new styles for better mobile display */
+  .achievement-content {
+    padding: 1rem;
+  }
+
+  .achievement-title {
+    font-size: 1.1rem;
+  }
+}
+
+/* Add a smaller screen breakpoint */
+@media (max-width: 480px) {
+  .achievement-card {
+    padding-left: 4rem;
+  }
+
+  .achievement-content {
+    padding: 0.8rem;
   }
 }

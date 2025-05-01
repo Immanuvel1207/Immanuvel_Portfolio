@@ -144,3 +144,42 @@
   background: var(--primary-color);
   color: white;
 }
+
+@media (max-width: 768px) {
+  .project-showcase {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-inner {
+    height: 350px;
+  }
+
+  .pagination li {
+    margin: 0 0.3rem;
+  }
+
+  .pagination li a {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Add a smaller screen breakpoint */
+@media (max-width: 480px) {
+  .project-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .card-inner {
+    height: 320px;
+  }
+
+  .card-front img {
+    height: 180px !important;
+  }
+
+  .pagination {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}

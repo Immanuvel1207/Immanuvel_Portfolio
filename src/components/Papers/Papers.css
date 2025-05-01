@@ -112,3 +112,37 @@
   box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
 }
 
+/* Add media queries for better mobile responsiveness */
+@media (max-width: 768px) {
+  .paper-header {
+    padding: 1.2rem;
+    font-size: 1.1rem;
+  }
+
+  .paper-details {
+    padding: 1.5rem;
+  }
+
+  .certificate-img {
+    width: 100% !important;
+    height: auto !important;
+    margin-right: 0 !important;
+    margin-bottom: 10px;
+  }
+}
+
+/* Add a smaller screen breakpoint */
+@media (max-width: 480px) {
+  .paper-header {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .paper-details {
+    padding: 1rem;
+  }
+
+  .abstract {
+    font-size: 0.9rem;
+  }
+}

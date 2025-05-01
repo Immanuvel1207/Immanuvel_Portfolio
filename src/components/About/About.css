@@ -116,13 +116,33 @@
   box-shadow: 0 8px 20px rgba(0, 123, 255, 0.4);
 }
 
+/* Update the media query for better mobile responsiveness */
 @media (max-width: 768px) {
   .about-content {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Add these new styles for better mobile display */
+  .about-image {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .cv-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Add a smaller screen breakpoint */
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }
