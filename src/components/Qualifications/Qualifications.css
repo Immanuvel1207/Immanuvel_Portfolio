@@ -115,20 +115,32 @@
 @media (max-width: 768px) {
   .timeline::after {
     left: 31px;
+    width: 3px; /* Make the line more visible */
   }
 
   .timeline-item {
     width: 100%;
     padding-left: 5rem;
     padding-right: 1rem;
+    margin-bottom: 1.5rem; /* Add space between items */
   }
 
   .timeline-item.right {
     left: 0;
   }
 
+  /* Fix the dot alignment issue */
   .timeline-item::before {
     left: 22px;
+    width: 25px; /* Make dots larger */
+    height: 25px; /* Make dots larger */
+    z-index: 2; /* Ensure it's above the line */
+    border: 3px solid white; /* Add border to make it stand out */
+  }
+
+  .timeline-content {
+    padding: 1.2rem;
+    margin-left: 0.5rem; /* Add some space from the timeline */
   }
 
   /* Add these new styles for better mobile display */
@@ -141,16 +153,16 @@
     padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
   }
-
-  .timeline-content {
-    padding: 1.2rem;
-  }
 }
 
 /* Add a smaller screen breakpoint */
 @media (max-width: 480px) {
   .timeline-item {
     padding-left: 4rem;
+  }
+
+  .timeline-item::before {
+    left: 18px; /* Adjust position for smaller screens */
   }
 
   .timeline-content {
@@ -166,3 +178,4 @@
     font-size: 0.8rem;
   }
 }
+

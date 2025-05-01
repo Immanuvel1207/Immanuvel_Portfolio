@@ -107,12 +107,14 @@
 @media (max-width: 768px) {
   .achievements-timeline::after {
     left: 31px;
+    width: 3px; /* Make the line more visible */
   }
 
   .achievement-card {
     width: 100%;
     padding-left: 5rem;
     padding-right: 1rem;
+    margin-bottom: 1.5rem; /* Add space between cards */
   }
 
   .achievement-card.right {
@@ -121,11 +123,26 @@
 
   .achievement-card .achievement-icon {
     left: 22px;
+    width: 45px; /* Make icon larger */
+    height: 45px; /* Make icon larger */
+    z-index: 2; /* Ensure it's above the line */
+    border: 3px solid white; /* Add border to make it stand out */
   }
 
-  /* Add these new styles for better mobile display */
+  /* Fix the dot alignment issue */
+  .achievement-card::before {
+    display: none; /* Remove the original dots */
+  }
+
+  /* Add a background behind the icon to hide the line */
+  .achievement-icon {
+    background-color: var(--primary-color);
+    box-shadow: 0 0 0 4px white;
+  }
+
   .achievement-content {
-    padding: 1rem;
+    padding: 1.2rem;
+    margin-left: 0.5rem; /* Add some space from the timeline */
   }
 
   .achievement-title {
@@ -139,7 +156,11 @@
     padding-left: 4rem;
   }
 
+  .achievement-card .achievement-icon {
+    left: 18px; /* Adjust position for smaller screens */
+  }
+
   .achievement-content {
-    padding: 0.8rem;
+    padding: 1rem;
   }
 }

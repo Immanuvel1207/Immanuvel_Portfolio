@@ -170,6 +170,14 @@
     width: 30px;
     height: 30px;
   }
+
+  .carousel-btn.prev {
+    left: 0px;
+  }
+  
+  .carousel-btn.next {
+    right: 0px;
+  }
 }
 
 /* Add a smaller screen breakpoint */
@@ -191,3 +199,110 @@
   }
 }
 
+/* Add certificate navigation dots for mobile */
+.certificate-dots {
+  display: none; /* Hidden by default, shown on mobile */
+  justify-content: center;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: var(--primary-color);
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .certificate-carousel {
+    width: 100%;
+    padding: 1rem;
+    height: 450px; /* Increased height for better visibility */
+  }
+
+  .certificate-slider {
+    width: 100%;
+    height: 450px; /* Match the carousel height */
+  }
+
+  .certificate-card {
+    width: 115%;
+    height: 300px; /* Increased height */
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .certificate-image {
+    width: 100%;
+    height: 70%; /* Increased height proportion */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .certificate-image img {
+    width: 90%; /* Increased width */
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .carousel-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+  }
+
+  /* Improve info display on hover */
+  .certificate-info {
+    padding: 1rem;
+  }
+
+  .certificate-dots {
+    display: flex;
+  }
+}
+
+/* Add a smaller screen breakpoint with even larger certificate display */
+@media (max-width: 480px) {
+  .certificate-carousel {
+    height: 400px;
+  }
+
+  .certificate-slider {
+    height: 400px;
+  }
+
+  .certificate-card {
+    width: 100%;
+    height: 350px;
+    padding: 0.5rem;
+  }
+
+  .certificate-image {
+    height: 75%;
+  }
+
+  .certificate-image img {
+    width: 95%;
+  }
+
+  /* Make info more readable on small screens */
+  .certificate-info {
+    padding: 0.5rem;
+  }
+
+  .certificate-info h3 {
+    font-size: 1rem;
+  }
+}
